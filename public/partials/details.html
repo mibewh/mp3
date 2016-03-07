@@ -1,8 +1,8 @@
 <section id="details" class="row" ng-if="movie">
 	<div class="small-10 small-centered columns">
 		<div id="navButtons">
-			<a ng-if="prev >= 1" href="./#/details/{{prev}}" class="button"><</a>
-			<a ng-if="next <= 250" href="./#/details/{{next}}" class="button">></a>
+			<a ng-if="prev >= 1" href="#/details/{{prev}}" class="button"><</a>
+			<a ng-if="next <= 250" href="#/details/{{next}}" class="button">></a>
 		</div>
 		<h3>{{movie.title}} (<b>{{movie.rated}}</b>)</h3>
 		<p>Rank: {{movie.rank}}</p>
