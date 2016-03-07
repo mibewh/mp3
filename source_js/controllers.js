@@ -1,4 +1,4 @@
-/* Sample Controller */
+//Use factory for universal functions (i.e. the getting of the json)
 app.factory('helper', function($http) {
   return {
   	getMovies: function() {
