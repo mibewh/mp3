@@ -2,7 +2,7 @@
 app.factory('helper', function($http) {
   return {
   	getMovies: function() {
-  		return $http.get('../data/imdb250.json')
+  		return $http.get('./data/imdb250.json')
 		.then(function(data) {
 			return data.data; //data is just has request. data.data is the list of movies
 		})

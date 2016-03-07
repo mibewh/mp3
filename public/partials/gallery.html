@@ -16,7 +16,7 @@
 	<section id="gallery" class="row collapse text-left">
 		<div class="small-12 large-2 columns end" ng-repeat="movie in movies | filter:genre:false">
 			<a href="/#/details/{{movie.rank}}">
-				<img src="/data/images/{{movie.imdbID}}.jpg"/>
+				<img src="./data/images/{{movie.imdbID}}.jpg"/>
 			</a>
 		</div>
 	</section>
