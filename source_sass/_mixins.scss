@@ -1,1 +1,8 @@
 // Insert your mixins
+
+@mixin hoverSlide($x,$y) {
+	transition: all .2s ease-in-out;
+	&:hover {
+		transform: translate($x, $y);
+	}
+}

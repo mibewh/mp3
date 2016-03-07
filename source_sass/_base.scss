@@ -1,1 +1,69 @@
-// Add any custom Sass & CSS here
+.menu {
+	display: inline-block;
+}
+
+.row {
+	text-align: left;
+}
+
+#filter-box {
+	margin-bottom: 30px;
+	.columns {
+		padding-top: 10px;
+		background-color: darkgray;
+	}
+}
+
+.list-item {
+	img {
+		height: 175px;
+		width: 120px;
+	}
+	@include hoverSlide(20px, 0);	
+	@include breakpoint(small only) {
+		text-align: center;
+	}
+	margin-bottom: 0px;
+	// padding-top: 5px;
+	padding: 5px;
+	// padding-bottom: 5px;
+	border-bottom: 2px solid black;
+	background-color: $light-gray;
+	&:hover {
+		background-color: darkgray;
+	}
+}
+
+#gallery {
+	text-align: left;
+	img {
+		height: 300px;
+		width: 200px;
+		padding: 5px;
+		// @include hoverGrow;
+		@include hoverSlide(0, -10px);
+	}
+}
+
+#genreSelect {
+	text-align: center;
+}
+
+#details {
+	text-align: left;
+	@include breakpoint(small only) {
+		text-align: center;
+	}
+	img {
+		height: 350px;
+		width: 250px;;
+	}
+	.columns {
+		padding: 10px;
+		background-color: $light-gray;
+	}
+	#navButtons{
+		text-align: center;
+	}
+	margin-bottom: 10px;
+}

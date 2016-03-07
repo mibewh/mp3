@@ -1,0 +1,23 @@
+<div ng-controller="GalleryCtrl">
+	<section id="genreSelect" class="row">
+		<button class="button" ng-click="genre=''">All</button>
+		<button class="button" ng-click="genre='Action'">Action</button>
+		<button class="button" ng-click="genre='Adventure'">Adventure</button>
+		<button class="button" ng-click="genre='Crime'">Crime</button>
+		<button class="button" ng-click="genre='Comedy'">Comedy</button>
+		<button class="button" ng-click="genre='Drama'">Drama</button>
+		<button class="button" ng-click="genre='Musical'">Musical</button>
+		<button class="button" ng-click="genre='Mystery'">Mystery</button>
+		<button class="button" ng-click="genre='Romance'">Romance</button>
+		<button class="button" ng-click="genre='Sci-Fi'">Sci-Fi</button>
+		<button class="button" ng-click="genre='Thriller'">Thriller</button>
+		<button class="button" ng-click="genre='Western'">Western</button>
+	</section>
+	<section id="gallery" class="row collapse text-left">
+		<div class="small-12 large-2 columns end" ng-repeat="movie in movies | filter:genre:false">
+			<a href="/#/details/{{movie.rank}}">
+				<img src="/data/images/{{movie.imdbID}}.jpg"/>
+			</a>
+		</div>
+	</section>
+</div>

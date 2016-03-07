@@ -1,0 +1,8 @@
+See demo video on spec page
+List of directives/other in the "files" section on spec
+
+At least one animation
+Use partials
+
+http://stackoverflow.com/questions/19614545/how-can-i-add-some-small-utility-functions-to-my-angularjs-application
+http://stackoverflow.com/questions/18421830/how-to-wait-till-the-response-comes-from-the-http-request-in-angularjs

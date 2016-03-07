@@ -1,0 +1,33 @@
+<div ng-controller="ListCtrl">
+	<section id="filter-box" class="row">
+		<div class=" small-8 small-centered columns">
+			<input ng-model="query" type="text" placeholder="Search movie names">
+			<label>Sort by
+				<select ng-model="orderType" ng-init="orderType='title'" ng-options="type.val as type.text for type in sortTypes" required>
+				</select>
+			</label>
+			<fieldset>
+				<input type="radio" ng-model="order" ng-value="false" ng-selected><label for="ascending">Ascending</label>
+				<input type="radio" ng-model="order" ng-value="true"><label for="descending">Descending</label>
+			</fieldset>
+		</div>
+	</section>
+
+	<section ng-repeat="movie in movies | filter:query:false | orderBy:orderType:order">
+		<div class="row align-center">
+			<div class="small-8 small-centered columns">
+				<a href="/#/details/{{movie.rank}}">
+					<div class='list-item media-object stack-for-small'>
+						<div class="media-object-section">
+							<img class="test" src="/data/images/{{movie.imdbID}}.jpg"/>
+						</div>
+						<div class="media-object-section">
+							<h3>{{movie.title}}</h3>
+							<p>Rank: {{movie.rank}}</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

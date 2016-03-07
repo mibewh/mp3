@@ -1,0 +1,26 @@
+<section id="details" class="row" ng-if="movie">
+	<div class="small-10 small-centered columns">
+		<div id="navButtons">
+			<a ng-if="prev >= 1" href="/#/details/{{prev}}" class="button"><</a>
+			<a ng-if="next <= 250" href="/#/details/{{next}}" class="button">></a>
+		</div>
+		<h3>{{movie.title}} (<b>{{movie.rated}}</b>)</h3>
+		<p>Rank: {{movie.rank}}</p>
+		<p>{{movie.runtime}}</p>
+		<div class="media-object stack-for-small">
+			<div class="media-object-section">
+				<img class="test" src="/data/images/{{movie.imdbID}}.jpg"/>
+			</div>
+			<div class="media-object-section">
+				<p>{{movie.plot}}</p>
+				<p>Metascore: {{movie.metascore}}, IMDB score: {{movie.imdbRating}}</p>
+				<p>Released: {{movie.released}}</p>
+				<p>Awards: {{movie.awards}}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <div ng-if="!movie">
+	Movie not found
+</div> -->
